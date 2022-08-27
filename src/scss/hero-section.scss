@@ -1,0 +1,36 @@
+.hero-section {
+    min-height: 100vh;
+
+    &__container {
+        height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &--h{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__title {
+        color: #ffffff;
+        position: relative;
+    }
+
+    &__arrow {
+        position: absolute;
+        display: block;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 222;
+        .arrow{
+            &--color{
+                stroke: #ffffff;
+            }
+        }
+    }
+}
