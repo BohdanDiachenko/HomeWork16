@@ -137,12 +137,116 @@
 	display: none;
 }
 .wpapper-gradient{
-	
-	z-index: -222;
+	border-radius: 0px 0px 12px 12px;
+	position: relative;
 	background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
+	margin-bottom: rem(80);
+	.header-bleck &::before
+		{
+		content: "";
+		position: absolute;
+		bottom: -10px;
+		right: 20px;
+		left: 20px;
+		height: 50px;
+		background: #CACADB;
+		border-radius: 0px 0px 12px 12px;
+		z-index: -223;
+	}
+	.header-bleck &::after{
+		content: "";
+		position: absolute;
+		bottom: -20px;
+		right: 40px;
+		left: 40px;
+		height: 50px;
+		background: #E7E7F2;
+		border-radius: 0px 0px 12px 12px;
+		z-index: -224;
+	}
 }
 .basic-title{
 	font-weight: 700;
-	font-size: rem(38);
-	line-height: math.div(46 , 38);
+	font-size: rem(30);
+	line-height: math.div(36.57 , 30);
+	@media (min-width: 479px){
+		font-size: rem(38);
+		line-height: math.div(46 , 38);        
+	}
+}
+.title-link{
+	margin-bottom: rem(10);
+    color: $mainColorMenuIconsWhiteTheme;
+    transition: color 0.7s;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: inline-block;
+
+	&::after{
+		content: "";
+		display: inline-block;
+		height: 9px;
+		width: 9px;
+		border: 3px solid;
+		border-color: $mainColorMenuIconsWhiteTheme;
+		transform: rotate(45deg);
+		border-left: none;
+		border-bottom: none;
+		margin-left: rem(5.5);
+		&:hover{
+			border-color: $mainObjectColor;
+		}
+	}
+	&:hover{
+		color: $mainObjectColor;
+    }
+	&:hover .title-link::after{
+		border-color: $mainObjectColor;
+	}
+}
+.title-gradient{
+	background: $gradient-text;
+	-webkit-background-clip: text;
+	color: transparent; 
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+.bg-dark-blue {
+    background-color: #1C4280;
+}
+.bg-dark-yankees {
+    background-color: #143646;
+}
+.bg-cadmium-orange {
+    background-color: #F48B30;
+}
+.bg-deep-lilac {
+    background-color: #9E4DC3;
+}
+.bg-deep-saffron {
+    background-color: #FD9339;
+}
+.bg-platinum {
+    background-color: #E2E2E4;
+}
+.bg-cardinal {
+    background-color: #C71C36;
+}
+.bg-water {
+    background-color: #DCF3F9;
+}
+.bg-bright-gray {
+    background-color: #EAEAEA;
+}
+.bg-yankees-blue {
+    background-color: #282240;
+}
+.bg-indigo {
+    background-color: #b0a8cf;
+}
+.bg-black {
+    background-color: #000000;
 }

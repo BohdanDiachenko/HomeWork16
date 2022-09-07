@@ -1,0 +1,107 @@
+.publications {
+    background: $mainColorbackgroungWhiteSection;
+    padding-bottom: 30px;
+    &__container {
+        position: relative;
+    }
+
+    &__title {
+        &--wrapper,
+        &--wrapper-rec {
+            padding: 60px 0;
+        }
+        &--wrapper{
+            display: none;
+            .home & {
+                display: block;
+            }
+        }
+        &--wrapper-rec{
+            position: static;
+            top: 0;
+            left: 30px;
+            display: block;
+            .home & {
+                display: none;
+                position: absolute;
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template: repeat(3, auto) / 1fr;
+        font-size: rem(14);
+        line-height: math.div(22 , 14);
+        font-weight: 400;
+        gap: 30px;
+        background: $mainColorMenuIconsBleckTheme;
+        background: transparent;
+        @media (min-width: 479px){
+            grid-template: 1fr 1fr / repeat(2, 1fr);
+        }
+        @media (min-width: 768px){
+            grid-template: 1fr / repeat(3, 1fr);
+        }
+    }
+
+    &__item {
+        border-radius: 8px;
+        background: $mainColorMenuIconsBleckTheme;
+        overflow: hidden;
+        &:last-child {
+            grid-column: 1 / 2;
+            @media (min-width: 479px){
+                grid-column: 1 / 3;
+            }
+            @media (min-width: 768px){
+                grid-column: 3 / 4;
+            }
+        }
+        &--link {
+            display: block;
+            margin-bottom: rem(30);    
+            img {
+                max-height: 200px;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }     
+        }
+        &--content {
+            padding: 0 30px 30px;  
+        }
+        &--title {
+            font-weight: 700;
+            font-size: rem(16);
+            line-height: math.div(20 , 16);
+            color: $mainColorMenuIconsWhiteTheme;
+            margin-bottom: rem(15);
+        }
+    }
+
+    &__date {
+        display: block;
+        font-weight: 700;
+        font-size: rem(12);
+        line-height: math.div(14.63 , 16);
+        color: $gray;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: rem(34);
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            height: 4px;
+            left: 0px;
+            right: 0px;
+            bottom: -15px;
+            background: #E6E6F0;
+
+        }
+    }
+}
+.basic-title {
+}

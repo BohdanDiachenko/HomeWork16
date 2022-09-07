@@ -1,3 +1,15 @@
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../fonts/icomoon.eot?ie12lj');
+	src:  url('../fonts/icomoon.eot?ie12lj#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?ie12lj') format('truetype'),
+		url('../fonts/icomoon.woff?ie12lj') format('woff'),
+		url('../fonts/icomoon.svg?ie12lj#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
 %ic {
 	font-family: "icons";
 	font-style: normal;

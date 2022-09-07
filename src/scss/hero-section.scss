@@ -10,14 +10,26 @@
     }
     &--h{
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        min-height: 100%;
+        width: 576px;
+        position: absolute;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        overflow: hidden;
+        
+        @media (min-width: 576px){
+            width: 100%;
+        }
+        img{
+            height: 100%;
+            position: absolute;
+        }
     }
     &__title {
         color: #ffffff;
         position: relative;
+        text-align: center;
     }
 
     &__arrow {
@@ -27,9 +39,21 @@
         left: 50%;
         transform: translateX(-50%);
         z-index: 222;
+        &:hover .arrow--circle,
+                .arrow--color{
+            stroke: #F0145A;
+        }
+        &:hover .arrow--color{
+            stroke: #F0145A;
+        }
         .arrow{
+            &--circle{
+                stroke: #ffffff;
+                transition: .7s;
+            }
             &--color{
                 stroke: #ffffff;
+                transition: .7s;
             }
         }
     }

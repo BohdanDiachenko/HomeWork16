@@ -1,0 +1,67 @@
+.team-slider {
+    padding-bottom: rem(60);
+    &__container {
+    
+    }
+    &__slider{
+        padding-bottom: 106px;
+    }
+    &__slide {
+        display: grid;
+        grid-template: 500px / 1fr;
+        background: $mainColorbackgroungWhiteSection;
+        border-radius: 12px;
+        @media (min-width: 768px){
+            grid-template: auto / 400px 1fr;
+        }
+    }
+    .swiper-pagination {
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .swiper-pagination-bullet{
+        height: 16px;
+        width: 16px;
+        &:nth-child(2){
+            margin: 0 15px;
+        }
+    }
+    &__image {
+        min-height: 344px;
+        position: relative;
+        img{
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__content {
+        padding: 30px;
+    } 
+
+    &__title {
+        margin-bottom: rem(30);
+        &--link {
+            margin-bottom: rem(5);
+        }
+    }
+
+    &__author {
+        margin-bottom: rem(6);
+        font-weight: 700;
+        font-size: rem(16);
+        line-height: math.div(19.5 , 16);
+        color: $gray;
+        &--position {
+            font-size: rem(14);
+            line-height: math.div(22 , 14);
+            color: $gray;
+        }
+    }
+}

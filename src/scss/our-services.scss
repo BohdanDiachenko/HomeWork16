@@ -1,19 +1,75 @@
 .our-services {
-    padding-top: 176px;
+    padding-bottom: 60px;
+    .services & {
+        padding-top: 102px;
+        @media (min-width: 768px){
+            padding-top: 225px;
+        }
+        @media (min-width: 992px){
+            padding-top: 176px;
+        }
+    }
     &__container {
     }
-    &__title-wrapper {
-    }
-
     &__title {
+        &--wrapper {
+            padding: 60px 0;
+            background: $gradient-text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        &--link {
+            display: none;
+            .home & {
+                display: inline-block;
+            }
+        }
     }
 
     &__list {
+        display: grid;
+        grid-template: 1fr/ 1fr;
+        gap: 60px;
+        font-size: rem(16);
+        line-height: math.div(26 , 16);
+        color: $mainColorText;
+        @media (min-width: 768px){
+            grid-template: 1fr 1fr 1fr / 1fr 1fr;
+        }
+        @media (min-width: 1024px){
+            grid-template: 1fr 1fr / 1fr 1fr 1fr;
+        }
     }
 
     &__item {
-
+        &--link {
+            display: block;
+            width: 92px;
+            height: 92px;
+            background: #fff;
+            border-radius: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+            img {
+                transition: scale 0.7s;
+            }
+            &:hover img {
+                scale: 1.2;
+            }
+        }
         &--title {
+            font-weight: 700;
+            font-size: rem(22);
+            line-height: math.div(27 , 22);
+            margin-bottom: 15px;
+            color: $mainColorMenuIconsWhiteTheme;
+            cursor: pointer;
+            transition: color 0.7s;
+            &:hover{
+                color: $mainObjectColor;
+            }
         }
 
         &--text {

@@ -1,0 +1,45 @@
+.clients {
+
+    &__container {
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(14);
+        line-height: math.div(17 , 14);
+        letter-spacing: 1px;
+        color: #323264;
+        margin-bottom: rem(30);
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        @media (min-width: 479px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: 768px){
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media (min-width: 1024px){
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 120px;
+        // padding: 35px 70px;
+    }
+
+    &__link {
+        
+    }
+
+    &__logo {
+
+    }
+}

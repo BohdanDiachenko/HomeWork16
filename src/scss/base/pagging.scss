@@ -1,19 +1,26 @@
-.pagging {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	// .pagging__arrow
-	&__arrow {
-	}
-	// .pagging__list
-	&__list {
-		display: flex;
-		li {
-		}
-	}
-	// .pagging__item
-	&__item {
-		&._active {
-		}
-	}
-}
+// .pagging {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	height: 20px;
+// 	width: 100%;
+// 	background: #000;
+// 	// .pagging__arrow
+// 	&__arrow {
+// 	}
+// 	// .pagging__list
+// 	&__list {
+// 		display: flex;
+// 		li {
+// 			width: 16px;
+// 			height: 16px;
+// 			border-radius: 50%;
+// 			background: #D3EDFF;
+// 		}
+// 	}
+// 	// .pagging__item
+// 	&__item {
+// 		&._active {
+// 		}
+// 	}
+// }

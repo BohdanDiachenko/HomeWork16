@@ -226,6 +226,8 @@
 	transition: 0.3s opacity;
 	transform: translate3d(0, 0, 0);
 	z-index: 10;
+	bottom: 20px;
+	left: 50%;
 }
 .swiper-pagination.swiper-pagination-hidden {
 	opacity: 0;
@@ -234,7 +236,7 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-	bottom: 10px;
+	bottom: 0;
 	left: 0;
 	width: 100%;
 }
