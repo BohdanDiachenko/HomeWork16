@@ -1,0 +1,94 @@
+.experience {
+
+    &__container {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template: 1fr / 43% 57%;
+    }
+    &__radio{
+        opacity: 0;
+		position: absolute;
+		visibility: hidden;
+    }
+}
+
+.experience-tabs {
+    position: relative;
+    width: 100%;    
+    background-color: transparent;
+    padding: 43px 60px 43px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+  
+}
+.experience-tab {
+    background: $gray;
+	-webkit-background-clip: text;
+	color: transparent; 
+    min-width: 375px;
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        border-right: 4px solid $gray;
+        z-index: 1;
+    }
+    &:hover {
+        background: $gradient-text;
+        -webkit-background-clip: text;
+        color: transparent;
+        
+    }
+}
+.experience-panels {
+    padding: 43px 10px 43px 60px;
+    font-size: rem(19);
+    line-height: math.div(36 , 19);
+    color: $mainColorText;
+    position: relative;
+}
+.experience-panel {
+    max-width: 670px;
+    &__content {
+        display: none;
+        animation: anim .8s;
+        &--title {
+            font-size: rem(30);
+            line-height: math.div(36.5 , 30);
+            font-weight: 700;
+            margin-bottom: rem(30);
+        }
+
+        &--text {
+        }
+    }
+}
+#one:checked ~ .experience-panels #one-panel,
+#two:checked ~ .experience-panels #two-panel,
+#three:checked ~ .experience-panels #three-panel,
+#four:checked ~ .experience-panels #four-panel {
+  display: block;
+}
+#one:checked ~ .experience-tabs #one-tab,
+#two:checked ~ .experience-tabs #two-tab,
+#three:checked ~ .experience-tabs #three-tab, 
+#four:checked ~ .experience-tabs #four-tab {
+    background: $gradient-text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@keyframes anim {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
