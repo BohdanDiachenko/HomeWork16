@@ -309,7 +309,7 @@
 			~.header__nav {
 				bottom: -138vh;
 				opacity: 0;
-				z-index: -100;
+				z-index: -1000;
 				@media (min-width: 768px){
 					opacity: 1;
 				}
