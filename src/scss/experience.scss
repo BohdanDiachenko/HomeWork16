@@ -1,12 +1,20 @@
 .experience {
-
+    position: relative;
+    z-index: 1000;
     &__container {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        margin-bottom: 60px;
     }
     &__wrapper {
+        max-width: rem(1080);
+        margin: 0 auto;
         display: grid;
-        grid-template: 1fr / 43% 57%;
+        grid-template: 46px 1fr / 1fr;
+        gap: 60px;
+        @media (min-width:em(1024)){
+            grid-template: 303px / 449px  1fr;
+            gap: 0;
+        }
+        
     }
     &__radio{
         opacity: 0;
@@ -14,48 +22,50 @@
 		visibility: hidden;
     }
 }
-
 .experience-tabs {
-    position: relative;
-    width: 100%;    
     background-color: transparent;
-    padding: 43px 60px 43px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    display: flex;  
     gap: 30px;
-  
+    width: 100%;
+    overflow: auto;
+    @media (min-width:em(1024)){
+        flex-direction: column;
+        text-align: right;
+        border-right: 4px solid $gray;
+        border-bottom: none;
+        padding: 14.5px 60px 14.5px 10px;
+    }
 }
 .experience-tab {
     background: $gray;
 	-webkit-background-clip: text;
 	color: transparent; 
-    min-width: 375px;
-    &::after {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        content: '';
-        border-right: 4px solid $gray;
-        z-index: 1;
-    }
+    white-space: nowrap;    
     &:hover {
         background: $gradient-text;
         -webkit-background-clip: text;
         color: transparent;
-        
     }
 }
 .experience-panels {
-    padding: 43px 10px 43px 60px;
+    
     font-size: rem(19);
     line-height: math.div(36 , 19);
     color: $mainColorText;
-    position: relative;
+    border-top: 4px solid $gray;
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+    @media (min-width:em(1024)){
+        border-top: none;
+        padding: 10px 10px 0 60px;
+    }
+//     @media (min-width:em(1285)){
+//         padding: 43px 10px 43px 60px;
+//     }
 }
 .experience-panel {
-    max-width: 670px;
+    
     &__content {
         display: none;
         animation: anim .8s;
@@ -65,7 +75,6 @@
             font-weight: 700;
             margin-bottom: rem(30);
         }
-
         &--text {
         }
     }
