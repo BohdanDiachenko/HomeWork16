@@ -1,0 +1,95 @@
+.services-entry {
+    padding-bottom: 45px;
+    .services-en & {
+        padding-top: 102px;
+        @media (min-width: 768px){
+            padding-top: 225px;
+        }
+        @media (min-width: 992px){
+            padding-top: 176px;
+        }
+    }
+
+    &__wrapper {
+        max-width: 1080px;
+        margin: 0 auto;
+        font-weight: 400;
+        font-size: rem(19);
+        line-height: math.div(30 , 19);
+        color: $mainColorMenuIconsBleckTheme;
+    }
+
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 60px;
+        gap: 28px;
+        &--image {
+            display: block;
+            width: 92px;
+            height: 92px;
+            background: #fff;
+            border-radius: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        &--text{
+            display: flex;
+            flex-direction: column;
+            gap: 33px;
+        }
+
+        &--btn {
+            color: $mainColorMenuIconsBleckTheme;
+            padding: 18px 30px;
+            background: $mainColorMenuIconsWhiteTheme;
+            box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: rem(16);
+            line-height: math.div(20 , 16);
+        }
+    }
+
+    &__content {
+
+        &--title {
+            font-weight: 700;
+            font-size: rem(22);
+            line-height: math.div(27 , 22);
+            margin-bottom: rem(30);
+        }
+        &--lists{
+            display: flex;
+            gap: 60px;
+        }
+        &--list {
+            max-width: 47.2%;
+            li{
+                margin-bottom: rem(15);
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background: $mainObjectColor;
+                    margin-right: 8px;
+                }
+            }
+
+        }
+    }
+}
+
+.btn {
+}
+.list-one {
+}
+.list-two {
+}

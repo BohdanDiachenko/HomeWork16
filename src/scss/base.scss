@@ -193,9 +193,6 @@
 		border-left: none;
 		border-bottom: none;
 		margin-left: rem(5.5);
-		&:hover{
-			border-color: $mainObjectColor;
-		}
 	}
 	&:hover{
 		color: $mainObjectColor;

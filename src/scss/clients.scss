@@ -1,8 +1,4 @@
 .clients {
-
-    &__container {
-    }
-
     &__title {
         font-weight: 700;
         font-size: rem(14);
@@ -33,13 +29,5 @@
         align-items: center;
         min-height: 120px;
         // padding: 35px 70px;
-    }
-
-    &__link {
-        
-    }
-
-    &__logo {
-
     }
 }

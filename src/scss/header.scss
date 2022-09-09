@@ -59,8 +59,8 @@
 
 		@media (min-width: 992px) {
 			grid-template: 30px 30px / 1fr 3fr;
-			grid-template-areas: "logo info"
-				"logo navi";
+			grid-template-areas:"logo info"
+								"logo navi";
 			gap: 9px;
 		}
 	}
@@ -152,6 +152,7 @@
 		&--about-us {
 			.about-us & {
 				display: block;
+				white-space: nowrap; 
 			}
 		}
 	}
@@ -208,7 +209,7 @@
 		&--link {
 			text-decoration: none;
 			transition: all 0.3s ease;
-			border-bottom: 2px solid transparent;
+			border-bottom: none;
 			color: $mainColorMenuIconsWhiteTheme;
 			text-align: center;
 			padding: 10px;
@@ -224,6 +225,7 @@
 				padding: 0 0 5px 0;
 				border-radius: 0;
 				background: transparent;
+				border-bottom: 2px solid transparent;
 			}
 
 			&:hover {
@@ -309,7 +311,6 @@
 			~.header__nav {
 				bottom: -138vh;
 				opacity: 0;
-				z-index: -1000;
 				@media (min-width: 768px){
 					opacity: 1;
 				}
@@ -400,7 +401,6 @@
 
 		span {
 			top: 50%;
-			// transform: translateY(-1px);
 			transform: translateY(-50%);
 			background: #323264;
 		}
@@ -553,56 +553,3 @@
 		}
 	}
 }
-
-//====================================================================================================
-
-//Burger
-/*
-.icon-menu {
-	display: none;
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: rem(30);
-		height: rem(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - rem(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
-}
-*/
