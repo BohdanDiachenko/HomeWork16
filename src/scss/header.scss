@@ -123,6 +123,9 @@
 			@media (min-width: 768px) {
 				left: 160px;
 			}
+			.header-bleck & {
+				color: $mainColorMenuIconsBleckTheme;
+			}
 		}
 
 		&--publications {
