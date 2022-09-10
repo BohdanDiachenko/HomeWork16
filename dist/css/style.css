@@ -211,13 +211,16 @@ body {
   border-left: none;
   border-bottom: none;
   margin-left: 0.34375rem;
+  -webkit-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
 }
 
 .title-link:hover {
   color: #F0145A;
 }
 
-.title-link:hover .title-link::after {
+.title-link:hover::after {
   border-color: #F0145A;
 }
 

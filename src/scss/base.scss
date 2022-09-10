@@ -193,13 +193,14 @@
 		border-left: none;
 		border-bottom: none;
 		margin-left: rem(5.5);
+		transition: 0.7s;
 	}
 	&:hover{
 		color: $mainObjectColor;
     }
-	&:hover .title-link::after{
+	&:hover::after{
 		border-color: $mainObjectColor;
-	}
+    }
 }
 .title-gradient{
 	background: $gradient-text;
