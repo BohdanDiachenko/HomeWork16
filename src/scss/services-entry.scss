@@ -53,6 +53,13 @@
             font-weight: 700;
             font-size: rem(16);
             line-height: math.div(20 , 16);
+            transition: .6s;
+            &:hover {
+                background: #0085FF;
+            }
+            &:active {
+                background: #006CCF;
+            }
         }
     }
 
@@ -66,30 +73,26 @@
         }
         &--lists{
             display: flex;
-            gap: 60px;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding-left: 15px;
+            @media (min-width: 768px){
+                flex-wrap: nowrap;
+                gap: 45px;
+            }
         }
         &--list {
-            max-width: 47.2%;
+            max-width: 100%;
+            @media (min-width: 768px){
+                max-width: 47.2%;
+            }
             li{
                 margin-bottom: rem(15);
-                &::before{
-                    content: "";
-                    display: inline-block;
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 50%;
-                    background: $mainObjectColor;
-                    margin-right: 8px;
+                list-style: disc;
+                &::marker {
+                    color: $mainObjectColor;
                 }
             }
-
         }
     }
-}
-
-.btn {
-}
-.list-one {
-}
-.list-two {
 }
