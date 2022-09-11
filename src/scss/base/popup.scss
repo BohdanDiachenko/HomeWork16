@@ -68,7 +68,6 @@ body::after {
 	top: 23px;
 	right: 23px;
 	transform: translate(-50% -50%);
-	padding: 7px;
 	border-radius: 8px;
 	&:hover{
 		background: #E6E6F0;
@@ -77,29 +76,42 @@ body::after {
 .form {
 
 	&__title {
+		margin-bottom: 30px;
+		padding-right: 30px;
 	}
 
-	&__item {
+	&__name {
+		height: 56px;
+		margin-bottom: 15px;
+	}
+
+	&__message {
+		min-height: 130px;
+		height: 100%;
+		
+	}
+	&__phone {
+		margin-bottom: 15px;
+	}
+	&__email {
+		margin-bottom: 30px;
 	}
 
 	&__input {
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding: 15px;
+		border-radius: 8px;
 	}
 
 	&__label {
+		display: block;
+		margin-bottom: 15px;
 	}
 
 	&__button {
+		width: 100%;
+		padding: 18px;
 	}
 }
-.popup {
-
-	&__wrapper {
-	}
-
-	&__content {
-	}
-
-	&__close {
-	}
-}
-

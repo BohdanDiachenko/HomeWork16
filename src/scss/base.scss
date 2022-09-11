@@ -248,3 +248,20 @@ img {
 .bg-black {
     background-color: #000000;
 }
+.btn {
+	display: block;
+	color: $mainColorMenuIconsBleckTheme;
+	background: $mainColorMenuIconsWhiteTheme;
+	box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+	border-radius: 12px;
+	font-weight: 700;
+	font-size: rem(16);
+	line-height: math.div(20 , 16);
+	transition: .6s;
+	&:hover {
+		background: #0085FF;
+	}
+	&:active {
+		background: #006CCF;
+	}
+}
